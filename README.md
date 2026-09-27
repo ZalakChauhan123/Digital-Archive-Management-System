@@ -11,7 +11,7 @@ A comprehensive document digitization and archive management system built with J
 
 ## 🌟 Overview
 
-The Digital Archive Management System is designed to help organizations preserve, organize, search, and manage historical and administrative documents efficiently. It supports end-to-end document workflows from upload and metadata entry to search, access management, and version history.
+The Digital Archive Management System is designed to help organizations preserve, organize, search, and manage historical and administrative documents efficiently. It supports end-to-end document workflows, from upload and metadata tagging to secure access control and long-term preservation.
 
 This project is especially well-suited for:
 - 📜 Presidential and historical archives
@@ -19,7 +19,41 @@ This project is especially well-suited for:
 - 🔬 Research and records management offices
 - 🏢 Government and public sector digitization programs
 
-## 🏗️ Project Structure
+## 🏗️ System Architecture
+
+```mermaid
+flowchart LR
+    U[Archivists / Researchers / Admins] --> FE[React Frontend\nMaterial UI + Routing]
+    FE --> API[Spring Boot API\nREST Controllers + Services]
+    API --> AUTH[JWT Authentication\nRole-based Access Control]
+    API --> DOC[Document Processing\nUpload + Metadata + Versioning]
+    API --> SEARCH[Search & Indexing\nFull-text + Category Filters]
+    API --> DB[(PostgreSQL\nDocuments, Users, Categories, Audit Logs)]
+    DOC --> FS[File Storage\nLocal / Object Storage]
+    FE --> VIEW[Document Viewer\nPDF / Image Preview]
+    VIEW --> FS
+    API --> LOG[Audit & Analytics\nUsage Trends + Security Events]
+
+    subgraph ClientLayer[Frontend Layer]
+        FE
+        VIEW
+    end
+
+    subgraph ServerLayer[Backend Layer]
+        API
+        AUTH
+        DOC
+        SEARCH
+        LOG
+    end
+
+    subgraph DataLayer[Data & Storage Layer]
+        DB
+        FS
+    end
+```
+
+## 🏛️ Project Structure
 
 ```text
 digital-archive-management-system/
@@ -68,6 +102,37 @@ digital-archive-management-system/
 - 🏷️ Flexible tagging for cross-cutting categorization
 - 📊 Analytics dashboard for document trends and statistics
 - 🔄 Support for multiple common document formats
+
+## 🚀 Live Demo
+
+This project is designed to be deployed as a full-stack application with a modern web interface and secure backend API.
+
+A typical live deployment architecture includes:
+- Frontend: React app hosted on a static web platform or Kubernetes-ready frontend environment
+- Backend: Spring Boot service deployed behind a secure API gateway or managed cloud runtime
+- Database: PostgreSQL instance for users, document metadata, access control, and audit logs
+- Storage: File system or cloud object storage for scanned documents and uploads
+
+### Demo-ready deployment flow
+
+1. Deploy the PostgreSQL database
+2. Configure backend environment variables and database credentials
+3. Build and deploy the Spring Boot API
+4. Deploy the React frontend
+5. Upload sample archive records and validate document search, category filters, and permissions
+
+### Example deployment targets
+
+- Vercel / Netlify for the frontend
+- Render / Railway / AWS / Azure / DigitalOcean for the backend
+- Supabase / Neon / managed PostgreSQL for the database
+- S3-compatible storage or local mounted storage for digital files
+
+> Replace the deployment URLs below with your actual hosting configuration when you publish the demo:
+>
+> - Frontend Demo: https://your-frontend-demo-url.com
+> - API Demo: https://your-backend-demo-url.com/api
+> - Admin Login: admin@archive.local / Admin@123
 
 ## 🧰 Tech Stack
 
