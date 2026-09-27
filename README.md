@@ -2,6 +2,9 @@
 
 A comprehensive document digitization and archive management system built with **Java Spring Boot**, **React**, and **PostgreSQL**.
 
+## Project Structure
+
+```text
 digital-archive-management-system/
 ├── backend/
 │   ├── src/main/java/.../
@@ -33,8 +36,7 @@ digital-archive-management-system/
 ├── storage/
 ├── README.md
 └── .gitignore
-
-Hallo
+```
 
 ## Features
 
