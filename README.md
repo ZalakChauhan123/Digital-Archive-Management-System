@@ -102,31 +102,6 @@ digital-archive-management-system/
 - 📊 Analytics dashboard for document trends and statistics
 - 🔄 Support for multiple common document formats
 
-## 🚀 Live Demo
-
-This project is designed to be deployed as a full-stack application with a modern web interface and secure backend API.
-
-A typical live deployment architecture includes:
-- Frontend: React app hosted on a static web platform or Kubernetes-ready frontend environment
-- Backend: Spring Boot service deployed behind a secure API gateway or managed cloud runtime
-- Database: PostgreSQL instance for users, document metadata, access control, and audit logs
-- Storage: File system or cloud object storage for scanned documents and uploads
-
-### Demo-ready deployment flow
-
-1. Deploy the PostgreSQL database
-2. Configure backend environment variables and database credentials
-3. Build and deploy the Spring Boot API
-4. Deploy the React frontend
-5. Upload sample archive records and validate document search, category filters, and permissions
-
-### Example deployment targets
-
-- Vercel / Netlify for the frontend
-- Render / Railway / AWS / Azure / DigitalOcean for the backend
-- Supabase / Neon / managed PostgreSQL for the database
-- S3-compatible storage or local mounted storage for digital files
-
 ## 🧰 Tech Stack
 
 ### Backend
@@ -269,12 +244,3 @@ http://localhost:5173
 ## 📌 Notes
 
 This project demonstrates a strong foundation for a modern digital archive platform and is suitable as both a demonstration system and a base for further enterprise-grade enhancements.
-
----
-
-If you want, I can also make this README even more premium by adding:
-- a license badge
-- a screenshot section
-- a contributor section
-- a live demo section
-- a better architecture diagram
