@@ -87,7 +87,6 @@ digital-archive-management-system/
 ├── storage/
 ├── README.md
 ├── .gitignore
-└── LICENSE (optional)
 ```
 
 ## ✨ Core Features
@@ -127,12 +126,6 @@ A typical live deployment architecture includes:
 - Render / Railway / AWS / Azure / DigitalOcean for the backend
 - Supabase / Neon / managed PostgreSQL for the database
 - S3-compatible storage or local mounted storage for digital files
-
-> Replace the deployment URLs below with your actual hosting configuration when you publish the demo:
->
-> - Frontend Demo: https://your-frontend-demo-url.com
-> - API Demo: https://your-backend-demo-url.com/api
-> - Admin Login: admin@archive.local / Admin@123
 
 ## 🧰 Tech Stack
 
