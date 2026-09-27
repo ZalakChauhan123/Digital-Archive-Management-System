@@ -1,4 +1,4 @@
-# Digital Archive Management System 📚
+# Digital Archive Management System
 
 A comprehensive document digitization and archive management system built with Java Spring Boot, React, and PostgreSQL.
 
@@ -19,7 +19,7 @@ This project is especially well-suited for:
 - 🔬 Research and records management offices
 - 🏢 Government and public sector digitization programs
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart LR
